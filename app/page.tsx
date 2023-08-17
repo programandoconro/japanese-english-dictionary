@@ -9,7 +9,7 @@ export default function Home() {
     setInputWord(e.target.value);
   };
   useEffect(() => {
-    const url = `http://localhost:3000/api?word=${inputWord}`;
+    const url = `/api?word=${inputWord}`;
     const getDataDebouncing = setTimeout(async () => {
       try {
         const response = await fetch(url);
