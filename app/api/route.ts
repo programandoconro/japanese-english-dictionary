@@ -4,7 +4,7 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   const word = url.searchParams.get("word");
   const api = `https://jisho.org/api/v1/search/words?keyword=${word}`;
-  let data;
+  let data: unknown;
 
   if (word) {
     try {

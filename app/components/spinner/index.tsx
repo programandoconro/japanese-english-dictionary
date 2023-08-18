@@ -1,6 +1,4 @@
-import styles from './style.module.css'
+import styles from "./style.module.css";
 export default function Spinner() {
-  return(
-    <div className={styles.spinner}>Loading</div>
-  ) 
+  return <div className={styles.spinner}>Loading</div>;
 }

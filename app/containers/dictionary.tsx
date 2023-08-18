@@ -9,9 +9,9 @@ function Dictionary() {
   return (
     <>
       <Input setInputWord={setInputWord} />
-      <Definition inputWord={inputWord}/>
+      <Definition inputWord={inputWord} />
     </>
-
   );
 }
-export default memo(Dictionary)
+
+export default memo(Dictionary);
