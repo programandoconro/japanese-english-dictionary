@@ -8,7 +8,7 @@ function Dictionary() {
 
   return (
     <>
-      <Input setInputWord={setInputWord} />
+      <Input inputWord={inputWord} setInputWord={setInputWord} />
       <Definition inputWord={inputWord} />
     </>
   );
