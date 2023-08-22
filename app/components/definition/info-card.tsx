@@ -1,6 +1,3 @@
-import React from "react";
-import removeQuotes from "../utils/remove-quotes";
-
 const InfoCard = (props: Info) => {
   const { englishDefinition, japaneseDefinition } = props;
   return (
@@ -18,8 +15,8 @@ const InfoCard = (props: Info) => {
         </thead>
         <tbody>
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-            <td className="px-6 py-4">{removeQuotes(englishDefinition)}</td>
-            <td className="px-6 py-4">{removeQuotes(japaneseDefinition)}</td>
+            <td className="px-6 py-4">{englishDefinition}</td>
+            <td className="px-6 py-4">{japaneseDefinition}</td>
           </tr>
         </tbody>
       </table>
