@@ -39,6 +39,14 @@ function Definition(props: { inputWord: string }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputWord]);
 
+  const getAllDefinitions = (arr: string[]) => {
+    let definitions = "";
+    arr.forEach((def) => {
+      definitions = definitions ? definitions + ", " + def : def;
+    });
+    return definitions;
+  };
+
   return (
     <>
       {isLoading ? (
@@ -46,12 +54,14 @@ function Definition(props: { inputWord: string }) {
       ) : (
         definition && (
           <InfoCard
-            englishDefinition={definition?.senses[0].english_definitions[0]}
+            englishDefinition={getAllDefinitions(
+              definition?.senses[0].english_definitions
+            )}
             japaneseDefinition={definition?.japanese[0].word}
+            jlptLevel={getAllDefinitions(definition?.jlpt)}
           />
         )
       )}
-      {JSON.stringify(definition)}
     </>
   );
 }
