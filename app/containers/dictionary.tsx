@@ -7,10 +7,10 @@ function Dictionary() {
   const [inputWord, setInputWord] = useState<string>("");
 
   return (
-    <>
+    <div className="grid">
       <Input inputWord={inputWord} setInputWord={setInputWord} />
       <Definition inputWord={inputWord} />
-    </>
+    </div>
   );
 }
 

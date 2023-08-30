@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 const InfoCard = (props: Info) => {
   const { englishDefinition, japaneseDefinition, jlptLevel } = props;
   return (
@@ -26,7 +28,6 @@ const InfoCard = (props: Info) => {
               {jlptLevel}
             </th>
           </tr>
-          <td></td>
         </tbody>
       </table>
     </div>
@@ -39,4 +40,4 @@ type Info = {
   jlptLevel: string;
 };
 
-export default InfoCard;
+export default memo(InfoCard);
